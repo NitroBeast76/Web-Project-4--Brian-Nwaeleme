@@ -1,21 +1,22 @@
 
 /* 
-    I chose a split-complementary color family with my neutral colors as analogous. 
+    I chose a triadic color family with my neutral colors chosen for harmony and accessibility. 
 
     These colors are: 
 
-    Burnt Umber (#8B2E22) – To represent the color of the earth, the color of their art, and also the color of their heritage and culture. Primary color 
+    Forest Green (#228B22) – To represent the land, growth, and the natural spirit of Naawi-Oodena (also the green on the Treaty 1 flag). Primary color 
 
-    Satin Sheen Gold (#D4A548) – To represent agriculture through using the color of wheat. Secondary color 
+    Gold (#FFD700) – To represent the sun and vitality, reflecting both energy and ceremony (also the sun on the Treaty 1 flag). Secondary color 
 
-    Celestial Blue (#4B91C2) – To represent the color of the rivers and lakes. Second secondary color 
+    Royal Blue (#4169E1) – To represent the sky and water, both deeply tied to cultural identity and life (also the  blue on the Treaty 1 flag). Second secondary color 
 
-    Bone (#D9D1C1) – This represents the structure of the Lower Fort Garry. Neutral color for background 
+    Platinum (#E6E6E6) – This represents a city scape (since the m,ost common color in cities is grey due to roads and concrete, and it also provides a soft background. Neutral color for background 
 
-    Jet (#2F2F2F) – This is most suitable for writing. Second neutral color for text 
+    Jet (#2C2C2C) – This is most suitable for writing. Second neutral color for text 
 
-    Overall, all these colors represent the purpose of the site, which is to explore Treaty 1, which affects Indigenous people. So, using Indigenous colors (or colors related to their culture and land) will be most suitable.  
+    Overall, all these colors represent the purpose of the site, which is to explore Naawi-Oodena. So, using Indigenous colors (or colors related to their culture, flag and land) will be most suitable.  
 */
+
 
 /* Global styles */
 * {
@@ -29,7 +30,7 @@ html {
 
 /* Body styles */
 body {
-    background-color: #D9D1C1; /* Sets the background color to a neutral tone */
+    background-color: #E6E6E6; /* Sets the background color to a neutral tone */
     box-sizing: border-box; /* Ensures consistent box model behavior */
     padding: 0; /* Removes default padding */
     margin: 0; /* Removes default margin */
@@ -40,7 +41,7 @@ body {
 
 /* Header styles */
 header {
-    background-color: #8B2E22; /* Sets the header background to the primary color */
+    background-color: #228B22; /* Sets the header background to the primary color */
     padding: 20px 50px; /* Adds padding inside the header */
     align-items: center; /* Centers items vertically */
     justify-content: space-between; /* Distributes items evenly with space between */
@@ -48,12 +49,18 @@ header {
     font-family: Arial, Helvetica, sans-serif; /* Sets the font family */
     display: flex; /* Uses flexbox for layout */
     border: 2px solid gray; /* Adds a border around the header */
-    color: #D9D1C1; /* Sets the text color to a neutral tone */
+    color: #E6E6E6; /* Sets the text color to a neutral tone */
 }
+
 
 header a {
     text-decoration: none; /* Removes underline from links */
-    color: #D9D1C1; /* Sets link color to a neutral tone */
+    color: #E6E6E6; /* Sets link color to a neutral tone */
+    transition: transform 1s ease-in-out; /* Adds a smooth transition effect for transform property */
+}
+
+header a:hover {
+    transform: scale(1.1) translateY(-5px)  rotate(-1deg); /* Scales and translates  link on hover */
 }
 
 /* Navigation styles */
@@ -68,7 +75,7 @@ nav {
 /* Navigation links */
 nav a {
     text-decoration: none; /* Removes underline from links */
-    color: #D9D1C1; /* Sets link color to a neutral tone */
+    color: #E6E6E6; /* Sets link color to a neutral tone */
     margin-left: 20px; /* Adds spacing between navigation links */
 }
 
@@ -80,14 +87,14 @@ nav form #content {
 
 /* Hover effect for navigation links */
 nav a:hover {
-    color: #D4A548; /* Changes link color to the secondary color on hover */
+    color: #FFD700; /* Changes link color to the secondary color on hover */
     text-decoration: underline; /* Underlines text on hover */
 }
 
 /* Main content styles */
 main {
     font-family: Arial, Helvetica, sans-serif; /* Sets the font family */
-    color: #2F2F2F; /* Sets the text color to a neutral tone */
+    color: #2C2C2C; /* Sets the text color to a neutral tone */
     font-size: medium; /* Sets the font size */
     padding: 20px; /* Adds padding inside the main content */
     margin: 10px; /* Adds margin around the main content */
@@ -107,50 +114,50 @@ h2 {
 /* General link styles */
 a {
     text-decoration: none; /* Removes underline from links */
-    color: #4B91C2; /* Sets link color to the second secondary color */
+    color: #4169E1; /* Sets link color to the second secondary color */
     font-size: 1.6rem;
 }
 
 a:hover {
-    color: #D4A548; /* Changes link color to the secondary color on hover */
+    color: #FFD700; /* Changes link color to the secondary color on hover */
 }
 
 /* Sub-element link styles */
 sub a {
     display: inline; /* Displays the link inline */
     text-decoration: none; /* Removes underline from links */
-    color: #4B91C2; /* Sets link color to the second secondary color */
+    color: #4169E1; /* Sets link color to the second secondary color */
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Sets the font family */
     font-size: 1.6rem;
 }
 
 sub a:hover {
-    color: #D4A548; /* Changes link color to the secondary color on hover */
+    color: #FFD700; /* Changes link color to the secondary color on hover */
 }
 
 /* Button styles */
 button {
-    background-color: #8B2E22; /* Sets the button background to the primary color */
+    background-color: #228B22; /* Sets the button background to the primary color */
     border: 2px solid white; /* Adds a white border around the button */
-    color: #D9D1C1; /* Sets the button text color to a neutral tone */
+    color: #FFD700; /* Sets the button text color to a neutral tone */
 }
 
 button:hover {
-    background-color: #D4A548; /* Changes button background to the secondary color on hover */
-    color: #2F2F2F; /* Changes button text color to a neutral tone on hover */
+    background-color: #FFD700; /* Changes button background to the secondary color on hover */
+    color: #2C2C2C; /* Changes button text color to a neutral tone on hover */
 }
 
 /* Figcaption link styles */
 figcaption a {
     font-style: italic; /* Italicizes the text */
     text-decoration: none; /* Removes underline from links */
-    color: #2F2F2F; /* Sets link color to black */
+    color: #2C2C2C; /* Sets link color to black */
     margin-right: 5px; /* Adds spacing to the right of the link */
     display: flex; /* Uses flexbox for layout */
 }
 
 figcaption a:hover {
-    color: #8B2E22; /* Changes link color to red on hover */
+    color: #228B22; /* Changes link color to red on hover */
 }
 
 /* Footer styles */
@@ -158,7 +165,7 @@ footer {
     text-align: center; /* Centers text horizontally */
     font-size: medium; /* Sets the font size */
     font-family: sans-serif; /* Sets the font family */
-    background-color: #4B91C2; /* Sets the footer background to the second secondary color */
+    background-color: #4169E1; /* Sets the footer background to the second secondary color */
     padding: 60px; /* Adds padding inside the footer */
     margin: 0; /* Removes default margin */
     height: 10%; /* Sets the height of the footer */
@@ -167,23 +174,23 @@ footer {
 /* Footer heading styles */
 footer h4 {
     display: inline; /* Displays the heading inline */
-    color: #D9D1C1; /* Sets the text color to a neutral tone */
+    color: #E6E6E6; /* Sets the text color to a neutral tone */
     font-size: medium; /* Sets the font size */
 }
 
 /* Footer link styles */
 footer h4 a {
     display: inline; /* Displays the link inline */
-    color: #D9D1C1; /* Sets the link color to a neutral tone */
+    color: #E6E6E6; /* Sets the link color to a neutral tone */
     text-decoration: underline;/* Underlines the link */
 }
 
 footer h4 a:hover {
-    color: #8B2E22; /* Changes link color to the primary color on hover */
+    color: #228B22; /* Changes link color to the primary color on hover */
 }
 
 /* Horizontal rule styles */
 hr {
-    border: 1px solid #2F2F2F; /* Sets the border color to a neutral tone */
+    border: 1px solid #2C2C2C; /* Sets the border color to a neutral tone */
 }
 
