@@ -96,7 +96,7 @@ main {
     font-family: Arial, Helvetica, sans-serif; /* Sets the font family */
     color: #2C2C2C; /* Sets the text color to a neutral tone */
     font-size: medium; /* Sets the font size */
-    padding: 20px; /* Adds padding inside the main content */
+    padding: 25px; /* Adds padding inside the main content */
     margin: 10px; /* Adds margin around the main content */
 }
 
