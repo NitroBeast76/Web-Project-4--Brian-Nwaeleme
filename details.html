@@ -16,6 +16,60 @@
             padding: 25px; /* Adds padding inside the main content */
             margin: 10px; /* Adds margin around the main content */
         }
+
+        .F-layout {
+                display: grid;
+                grid-template-columns: 30% 1fr;
+                grid-template-rows: auto 1fr auto;
+                grid-template-areas:
+                    "introduction introduction"
+                    "sidebar main"
+                    /*"footer footer"*/;
+                min-height: 100vh;
+                align-content: center;
+        }
+
+            .F-layout > #introduction  { grid-area: introduction; }
+            .F-layout > .sidebar { grid-area: sidebar; }
+            .F-layout > main     { grid-area: main; }
+            /*.F-layout > footer   { grid-area: footer; }*/
+
+            .sidebar {
+                background: #E6E6E6;             
+                padding: 1.5rem;                  
+                border-right: 2px solid #53D553;  
+                width: auto;
+                margin-bottom: 10rem;
+                margin-top: 0rem;
+                border-radius: 10px;
+                align-self: top; /* Aligns the sidebar to the start */
+                height: 10%;
+                position: sticky; /* Makes the sidebar fixed */
+                top: 0;
+                left: 10;
+            }
+
+            .sidebar a{
+                text-decoration: none; /* Removes underline from links */
+                color: #2C2C2C; /* Sets link color to a neutral tone */
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center; /* Centers text inside the link */
+                font-size: 1.6rem;
+                
+            }
+
+            .sidebar a:hover {
+                color: #53D553; /* Changes link color to the primary color on hover */
+                text-decoration: underline; /* Underlines text on hover */
+            }
+
+            .sidebar h4{
+                font-size: 1.6rem; /* Sets the font size */
+                color: #2C2C2C; /* Sets the text color to a neutral tone */
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center; /* Centers text inside the link */
+                text-decoration: underline;
+            }
     </style>
 </head>
 
@@ -27,6 +81,7 @@
         <a href="index.html">
             <h1>Naawi Oodena</h1>
         </a>
+        <hr>
         <nav>
             <a href="index.html">Home</a>
             <a href="details.html">Details</a>

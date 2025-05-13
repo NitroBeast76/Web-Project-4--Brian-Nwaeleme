@@ -5,12 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naawi Oodena</title>
     <link rel="stylesheet" href="CSS/styles.css">
+
+    <style>
+        .gallery-wall{
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 50%;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            gap: 10px;
+            padding: 10px;
+            scrollbar-width: none;
+        }
+
+
+        .gallery-wall figure{
+            border: 1px solid #E6E6E6;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .gallery-wall  img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .gallery-wall img title {
+            border-radius: 60px;
+            background-color: #E6E6E6;
+            
+        }
+
+        
+
+    </style>
 </head>
 <body>
     <header>
         <a href="index.html">
             <h1>Naawi Oodena</h1>
         </a>
+        <hr>
         <nav>
             <a href="index.html">Home</a>
             <a href="details.html">Details</a>
@@ -20,9 +58,47 @@
     </header>
     
     <main>
+            <h1>Gallery</h1>
+            <p>Explore the beauty of Naawi Oodena though the images on these gallery.</p>
+            <br>
+        <section class="gallery-wall">
+            <figure id="aerial-view">
+                <img src="Images/Aerial view of naawi odeena.png" alt="Aerial view of Naawi Oodena" title="Aerial view of Naawi Oodena">
+                <figcaption>
+                    <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image </a>
+                </figcaption>
+            </figure>
+            <figure id="affordable-housing">
+                <img src="Images/affrodable housing complex in naaawi odeena.png" alt="Affordable housing complex in Naawi Oodena" title="Affordable housing complex in Naawi Oodena">
+                <figcaption>
+                    <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
+                </figcaption>
+            </figure>
+            <figure id="sustainable energy">
+                <img src="Images/sustaniable stuff.png" alt="Sustainable Energy Sources Utilized in Housing" title="Sustainable Energy Sources Utilized in Housing">
+                <figcaption>
+                    <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
+                </figcaption>
+            </figure>
+            <figure id="main-street">
+                <img src="Images/Main Street Perspective.png" alt="Main Street Perspective of Naawi-Oodena" title="Main Street Perspective of Naawi-Oodena">
+                <figcaption>
+                    <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="Images/Mixed-Income Housing Complex.png" title="Mixed-Income Housing Complex" alt="Mixed-Income Housing Complex">
+                <figcaption>
+                    <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
+                </figcaption>
+            </figure>
+            <figure>
+                <img src="Images/Modern Mixed-Use Urban Development with Parks.png" alt
+            </figure>
+        </section>
         
     </main>
-
+    <br>
     <footer>
         <h4>
             &copy; All rights reserved by Nwaeleme Ugonna | Click here to
