@@ -41,44 +41,36 @@ body {
 
 /* Header styles */
 header {
-    background-color: #53D553; /* Sets the header background to the primary color */
+    background-color: #228B22; /* Sets the header background to the primary color */
     padding: 20px 50px; /* Adds padding inside the header */
     align-items: center; /* Centers items vertically */
     justify-content: space-between; /* Distributes items evenly with space between */
     text-align: center; /* Centers text horizontally */
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Sets the font family */
+    font-family: Arial, Helvetica, sans-serif; /* Sets the font family */
+    display: flex; /* Uses flexbox for layout */
     border: 2px solid gray; /* Adds a border around the header */
-    color: #2C2C2C; /* Sets the text color to a neutral tone */
-    border-radius: 10px;
+    color: #E6E6E6; /* Sets the text color to a neutral tone */
 }
-
 
 header a {
     text-decoration: none; /* Removes underline from links */
-    color: #2C2C2C; /* Sets link color to a neutral tone */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    text-align: center; /* Centers text inside the link */
-}
-
-header a:hover {
-    transform: scale(1.1) translateY(-5px)  rotate(-1deg); /* Scales and translates  link on hover */
+    color: #E6E6E6; /* Sets link color to a neutral tone */
 }
 
 /* Navigation styles */
 nav {
     font-size: larger; /* Increases font size for navigation text */
+    display: flex; /* Uses flexbox for layout */
     padding: 20px; /* Adds padding inside the navigation */
-    justify-content: space-around; /* Distributes items evenly with space between */
+    justify-content: space-between; /* Distributes items evenly with space between */
     align-items: center; /* Centers items vertically */
 }
 
 /* Navigation links */
 nav a {
     text-decoration: none; /* Removes underline from links */
-    color: #2C2C2C; /* Sets link color to a neutral tone */
-    margin: 50px;
-    text-align: center;
-    font-weight: 500;
+    color: #E6E6E6; /* Sets link color to a neutral tone */
+    margin-left: 20px; /* Adds spacing between navigation links */
 }
 
 /* Form content inside navigation */
@@ -198,8 +190,132 @@ hr {
 
 
 
+.F-layout {
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "introduction introduction"
+        "sidebar main"
+        /*"footer footer"*/;
+    min-height: 100vh;
+    align-content: center;
+
+}
+
+.F-layout > #introduction  { grid-area: introduction; }
+.F-layout > .sidebar { grid-area: sidebar; }
+.F-layout > main     { grid-area: main; }
+/*.F-layout > footer   { grid-area: footer; }*/
+
+.sidebar {
+    background: #E6E6E6;             
+    padding: 1.5rem;                  
+    border-right: 2px solid #53D553;  
+    width: auto;
+    margin-bottom: 10rem;
+    margin-top: 0rem;
+    border-radius: 10px;
+    align-self: top; /* Aligns the sidebar to the start */
+    height: 10%;
+    position: sticky; /* Makes the sidebar fixed */
+    top: 0;
+    left: 10;
+}
+
+.sidebar a{
+    text-decoration: none; /* Removes underline from links */
+    color: #2C2C2C; /* Sets link color to a neutral tone */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; /* Centers text inside the link */
+    font-size: 1.6rem;
+    
+}
+
+.sidebar a:hover {
+    color: #53D553; /* Changes link color to the primary color on hover */
+    text-decoration: underline; /* Underlines text on hover */
+}
+
+.sidebar h4{
+    font-size: 1.6rem; /* Sets the font size */
+    color: #2C2C2C; /* Sets the text color to a neutral tone */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; /* Centers text inside the link */
+    text-decoration: underline;
+}
 
 
+/* Contact Form Styles */
+.contact-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #E6E6E6;
+    border-radius: 10px;
+    color: #2C2C2C;
+}
 
+.form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.form-header h1 {
+    color: #53D553;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.contact-form {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #2C2C2C;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 2px solid #53D553;
+    border-radius: 4px;
+    background: #E6E6E6;
+    color: #2C2C2C;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.submit-btn {
+    background: #228B22;
+    color: #FFD700;
+    border: 2px solid #2C2C2C;
+    padding: 1rem 2rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+    background: #FFD700;
+    color: #2C2C2C;
+}
+
+.confirmation-message {
+    background: #4169E1;
+    color: #E6E6E6;
+    border: 2px solid #53D553;
+}
+
+.required {
+    color: #FFD700;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+}
 
 
