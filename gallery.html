@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- HEAD SECTION: Meta tags and page title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naawi Oodena</title>
+    
+    <!-- EXTERNAL STYLESHEET LINK -->
     <link rel="stylesheet" href="CSS/styles.css">
 
+    <!-- GALLERY SPECIFIC STYLES -->
     <style>
-        .gallery-wall{
+        /* HORIZONTAL SCROLLING GALLERY CONTAINER */
+        .gallery-wall {
             display: grid;
             grid-auto-flow: column;
             grid-auto-columns: 50%;
@@ -16,37 +21,38 @@
             scroll-behavior: smooth;
             gap: 10px;
             padding: 10px;
-            scrollbar-width: none;
+            scrollbar-width: none; /* Hide scrollbar for cleaner look */
         }
 
-
-        .gallery-wall figure{
+        /* GALLERY ITEM STYLING */
+        .gallery-wall figure {
             border: 1px solid #E6E6E6;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
 
-        .gallery-wall  img {
+        /* IMAGE STYLING */
+        .gallery-wall img {
             width: 100%;
             height: 100%;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            object-fit: cover; /* Ensure images maintain aspect ratio */
         }
 
+        /* TITLE STYLING (currently unused - consider adding to figcaption) */
         .gallery-wall img title {
             border-radius: 60px;
             background-color: #E6E6E6;
-            
         }
-
-        
-
     </style>
 </head>
+
 <body>
+    <!-- HEADER SECTION: Logo and navigation -->
     <header>
         <a href="index.html">
-            <img src="Images/text-1747182718558.png" alt="Header saying Naawi-Oodena ">
+            <img src="Images/text-1747182718558.png" alt="Header saying Naawi-Oodena">
         </a>
         <hr>
         <nav>
@@ -57,66 +63,87 @@
         </nav>
     </header>
     
+    <!-- MAIN CONTENT SECTION -->
     <main>
-            <h1>Gallery</h1>
-            <p>Explore the beauty of Naawi Oodena though the images on these gallery.</p>
-            <br>
+        <h1>Gallery</h1>
+        <p>Explore the beauty of Naawi Oodena through the images in this gallery.</p>
+        <br>
+        
+        <!-- GALLERY SECTION -->
         <section class="gallery-wall">
+            <!-- GALLERY ITEM: Aerial View -->
             <figure id="aerial-view">
                 <img src="Images/Aerial view of naawi odeena.png" alt="Aerial view of Naawi Oodena" title="Aerial view of Naawi Oodena">
                 <figcaption>
-                    <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image </a>
+                    <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
                 </figcaption>
             </figure>
-            
+
+            <!-- GALLERY ITEM: Affordable Housing -->
             <figure id="affordable-housing">
                 <img src="Images/affrodable housing complex in naaawi odeena.png" alt="Affordable housing complex in Naawi Oodena" title="Affordable housing complex in Naawi Oodena">
                 <figcaption>
                     <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
                 </figcaption>
             </figure>
+
+            <!-- GALLERY ITEM: Sustainable Energy -->
             <figure id="sustainable energy">
                 <img src="Images/sustaniable stuff.png" alt="Sustainable Energy Sources Utilized in Housing" title="Sustainable Energy Sources Utilized in Housing">
                 <figcaption>
                     <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
                 </figcaption>
             </figure>
+
+            <!-- GALLERY ITEM: Main Street Perspective -->
             <figure id="main-street">
                 <img src="Images/Main Street Perspective.png" alt="Main Street Perspective of Naawi-Oodena" title="Main Street Perspective of Naawi-Oodena">
                 <figcaption>
                     <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
                 </figcaption>
             </figure>
+
+            <!-- GALLERY ITEM: Mixed-Income Housing -->
             <figure>
                 <img src="Images/Mixed-Income Housing Complex.png" title="Mixed-Income Housing Complex" alt="Mixed-Income Housing Complex">
                 <figcaption>
                     <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
                 </figcaption>
             </figure>
+
+            <!-- GALLERY ITEM: Community Park -->
             <figure>
                 <img src="Images/Community Park and Gathering Space.png" alt="Community Park and Gathering Space" title="Community Park and Gathering Space">
-            <figcaption>
-                <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
-            </figcaption>
+                <figcaption>
+                    <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
+                </figcaption>
             </figure>
+
+            <!-- GALLERY ITEM: Evening Streetscape -->
             <figure>
                 <img src="Images/Evening Streetscape.png" alt="Evening view of Naawi-Oodena streets" title="Evening Streetscape">
                 <figcaption>
                     <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
                 </figcaption>
             </figure>
+
+            <!-- GALLERY ITEM: Sustainable Features -->
             <figure>
                 <img src="Images/Sustainable Urban Features in New Development.png" alt="Sustainable Urban Features in New Development" title="Sustainable Urban Features in New Development">
                 <figcaption>
                     <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
                 </figcaption>
             </figure>
+
+            <!-- GALLERY ITEM: Public Library -->
             <figure>
                 <img src="Images/Naawi-Oodena Public Library & Learning Hub – Boulevard View.png" alt="Naawi-Oodena Public Library & Learning Hub - Boulevard View" title="Naawi-Oodena Public Library & Learning Hub - Boulevard View">
                 <figcaption>
                     <a href="https://magichour.ai/create" title="MagicHour AI">Click here to access the site with this image</a>
                 </figcaption>
             </figure>
+
+            <!-- GALLERY ITEM: Mixed-Use Development -->
             <figure>
                 <img src="Images/Modern Mixed-Use Urban Development with Parks.png" alt="Modern Mixed-Use Urban Development with Parks" title="Modern Mixed-Use Urban Development with Parks">
                 <figcaption>
@@ -124,6 +151,7 @@
                 </figcaption>
             </figure>
 
+            <!-- GALLERY ITEM: Winter Scene -->
             <figure>
                 <img src="Images/Winter Scene of the Community.png" alt="Winter season depiction" title="Winter Scene of the Community">
                 <figcaption>
@@ -131,6 +159,7 @@
                 </figcaption>
             </figure>
 
+            <!-- GALLERY ITEM: Civic Center -->
             <figure>
                 <img src="Images/Civic Administration Headquarters – Naawi-Oodena Governance Centre.png" alt="Civic Administration Headquarters – Naawi-Oodena Governance Centre" title="Civic Administration Headquarters – Naawi-Oodena Governance Centre">
                 <figcaption>
@@ -138,6 +167,7 @@
                 </figcaption>
             </figure>
 
+            <!-- GALLERY ITEM: Commercial Hub -->
             <figure>
                 <img src="Images/b1bcf8ab-153a-4db8-8999-e8b22433ac81 (1).png" alt="Commercial Hub - Naawi-Oodena" title="Commercial Hub - Naawi-Oodena">
                 <figcaption>
@@ -145,6 +175,7 @@
                 </figcaption>
             </figure>
 
+            <!-- GALLERY ITEM: Public Park -->
             <figure>
                 <img src="Images/Public Park with Community Gathering Area.png" alt="Public Park with Community Gathering Area" title="Public Park with Community Gathering Area">
                 <figcaption>
@@ -152,8 +183,9 @@
                 </figcaption>
             </figure>
         </section>
-        
     </main>
+
+    <!-- FOOTER SECTION -->
     <br>
     <footer>
         <h4>

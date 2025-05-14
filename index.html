@@ -13,16 +13,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+    <!-- Meta information for character encoding -->
     <meta charset="UTF-8">
 
+    <!-- Meta tag for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Title of the webpage -->
     <title>Naawi Oodena</title>
 
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="CSS/styles.css">
 
+    <!-- Internal CSS for specific styles -->
     <style>
+        /* Styling for the home info section */
         #home-info {
             display: flex;
             flex-direction: row;
@@ -32,31 +37,35 @@
             align-items: center; /* Vertically align text and image */
         }
 
+        /* Styling for the text section within home info */
         #home-text {
             flex: 1; /* Takes up 1 part */
             display: block;
             margin: 0;
         }
 
+        /* Styling for the image section within home info */
         #home-image {
-            flex: 2; /* Takes up 3 parts */
+            flex: 2; /* Takes up 2 parts */
             display: block;
         }
 
+        /* Styling for the image inside the home image section */
         #home-image img {
             width: 120%;
             height: auto;
         }
-        
     </style>
-
 </head>
 <body>
+    <!-- Header section -->
     <header>
+        <!-- Logo linking back to the homepage -->
         <a href="index.html">
             <img src="Images/text-1747182718558.png" alt="Header saying Naawi-Oodena ">
         </a>
         <hr>
+        <!-- Navigation menu -->
         <nav>
             <a href="index.html">Home</a>
             <a href="details.html">Details</a>
@@ -65,16 +74,18 @@
         </nav>
     </header>
 
+    <!-- Main content section -->
     <main>
+        <!-- Section for home information -->
         <section id="home-info">
-
+            <!-- Text content for the home section -->
             <div id="home-text">
                 <h1>Welcome to Naawi Oodena!</h1>
                 <p>We plan to break down the city to present in this website, in the following format:</p>
                 <ul>
-                    <li>Residential (lower density and medium density) </li>
+                    <li>Residential (lower density and medium density)</li>
                     <li>Commercial Mixed Use</li>
-                    <li>Community spaces </li>
+                    <li>Community spaces</li>
                     <li>Sports and Recreation</li>
                     <li>Cultural Campus + Education</li>
                     <li>Mixed-use village</li>
@@ -82,22 +93,23 @@
                 </ul>
             </div>
 
+            <!-- Image content for the home section -->
             <figure id="home-image">
                 <img src="Images/former-kapyong-barracks-master-plan.jpg" alt="Aerial view of former Kapyong Barracks now Naawi Odeena">
                 <figcaption>
+                    <!-- Link to the source of the image -->
                     <a href="https://www.cbc.ca/news/canada/manitoba/naawi-oodena-kapyong-plans-1.7025507" target="_blank">Click here to access the site with this image - [1]</a>
                 </figcaption>
             </figure>
-            
         </section>
     </main>
 
+    <!-- Footer section -->
     <footer>
         <h4>
             &copy; All rights reserved by Nwaeleme Ugonna | Click here to
             <a href="sources.html" aria-label="View sources">view full sources</a> to see sources
         </h4>
     </footer>
-
 </body>
 </html>

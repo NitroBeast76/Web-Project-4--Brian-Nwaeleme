@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- HEAD SECTION: Meta tags and page title -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naawi Oodena</title>
+    
+    <!-- EXTERNAL STYLESHEET LINK -->
     <link rel="stylesheet" href="CSS/styles.css">
 
+    <!-- CONTACT FORM STYLES -->
     <style>
+        /* MAIN FORM CONTAINER STYLES */
         .contact-container {
             max-width: 800px;
             margin: 2rem auto;
@@ -16,27 +21,30 @@
             color: #2C2C2C;
         }
 
+        /* FORM HEADER STYLES */
         .form-header {
             text-align: center;
             margin-bottom: 2rem;
         }
-
         .form-header h1 {
             color: #53D553;
             font-family: Arial, Helvetica, sans-serif;
             text-transform: uppercase;
         }
 
+        /* FORM LAYOUT STYLES */
         .contact-form {
             display: grid;
             gap: 1.5rem;
         }
 
+        /* FORM INPUT GROUP STYLES */
         .form-group label {
             font-weight: 600;
             color: #2C2C2C;
         }
 
+        /* INPUT FIELD STYLES */
         input, textarea, select {
             width: 100%;
             padding: 0.8rem;
@@ -47,6 +55,7 @@
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
+        /* SUBMIT BUTTON STYLES */
         .submit-btn {
             background: #228B22;
             color: #FFD700;
@@ -55,18 +64,19 @@
             font-weight: 600;
             transition: all 0.2s ease;
         }
-
         .submit-btn:hover {
             background: #FFD700;
             color: #2C2C2C;
         }
 
+        /* CONFIRMATION MESSAGE STYLES */
         .confirmation-message {
             background: #4169E1;
             color: #E6E6E6;
             border: 2px solid #53D553;
         }
 
+        /* REQUIRED FIELD INDICATOR */
         .required {
             color: #FFD700;
         }
@@ -74,6 +84,7 @@
 </head>
 
 <body>
+    <!-- HEADER SECTION: Logo and navigation -->
     <header>
         <a href="index.html">
             <img src="Images/text-1747182718558.png" alt="Header saying Naawi-Oodena ">
@@ -87,66 +98,76 @@
         </nav>
     </header>
     
+    <!-- MAIN CONTENT SECTION -->
     <main>
+        <!-- CONTACT FORM CONTAINER -->
         <div class="contact-container">
+            <!-- FORM HEADER -->
             <div class="form-header">
                 <h1>Naawi Odeena City Information</h1>
                 <p>Have questions about our city? Reach out to us using the form below.</p>
             </div>
 
-        <form class="contact-form" id="contactForm">
-            <fieldset>
-                <legend>Personal Information</legend>
-                <div class="form-group">
-                    <label for="name">Full Name <span class="required">*</span></label>
-                    <input type="text" id="name" name="name" required placeholder="John Doe">
-                </div>
+            <!-- CONTACT FORM -->
+            <form class="contact-form" id="contactForm">
+                <!-- PERSONAL INFORMATION FIELDSET -->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
 
-                <div class="form-group">
-                    <label for="email">Email Address <span class="required">*</span></label>
-                    <input type="email" id="email" name="email" required placeholder="john@example.com">
-                </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
 
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
-                </div>
-            </fieldset>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                    </div>
+                </fieldset>
 
-        <fieldset>
-            <legend>Inquiry Details</legend>
-            <div class="form-group">
-                <label for="subject">Inquiry Category <span class="required">*</span></label>
-                <select id="subject" name="subject" required class="cultural-select">
-                    <option value="">Select a community aspect</option>
-                    <option value="residential">Residential Development (Low/Medium Density)</option>
-                    <option value="recreation">Sports & Recreation Facilities</option>
-                    <option value="cultural-campus">Cultural Campus & Education</option>
-                    <option value="community-spaces">Community Spaces & Green Networks</option>
-                    <option value="mixed-use">Mixed-Use Village Development</option>
-                    <option value="commercial">Commercial Mixed-Use Projects</option>
-                    <option value="sustainability">Sustainability & Innovation</option>
-                    <option value="infrastructure">Infrastructure & Connectivity</option>
-                    <option value="cultural-design">Cultural & Architectural Identity</option>
-                    <option value="events">Community Events & Programming</option>
-                </select>
+                <!-- INQUIRY DETAILS FIELDSET -->
+                <fieldset>
+                    <legend>Inquiry Details</legend>
+                    <div class="form-group">
+                        <label for="subject">Inquiry Category <span class="required">*</span></label>
+                        <select id="subject" name="subject" required class="cultural-select">
+                            <option value="">Select a community aspect</option>
+                            <option value="residential">Residential Development (Low/Medium Density)</option>
+                            <option value="recreation">Sports & Recreation Facilities</option>
+                            <option value="cultural-campus">Cultural Campus & Education</option>
+                            <option value="community-spaces">Community Spaces & Green Networks</option>
+                            <option value="mixed-use">Mixed-Use Village Development</option>
+                            <option value="commercial">Commercial Mixed-Use Projects</option>
+                            <option value="sustainability">Sustainability & Innovation</option>
+                            <option value="infrastructure">Infrastructure & Connectivity</option>
+                            <option value="cultural-design">Cultural & Architectural Identity</option>
+                            <option value="events">Community Events & Programming</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span class="required">*</span></label>
+                        <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+                    </div>
+                </fieldset>
+
+                <!-- FORM SUBMISSION BUTTON -->
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+
+            <!-- CONFIRMATION MESSAGE -->
+            <br>
+            <div class="confirmation-message" id="confirmation">
+                <p> Thank you for your message! We'll try to respond as soon as possible.</p>
             </div>
-
-            <div class="form-group">
-                <label for="message">Message <span class="required">*</span></label>
-                <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
-            </div>
-        </fieldset>
-
-        <button type="submit" class="submit-btn">Send Message</button>
-    </form>
-    <br>
-    <div class="confirmation-message" id="confirmation">
-        <p> Thank you for your message! We'll try to respond as soon as possible.</p>
-    </div>
-    </div>
+        </div>
     </main>
 
+    <!-- FOOTER SECTION -->
     <footer>
         <h4>
             &copy; All rights reserved by Nwaeleme Ugonna | Click here to

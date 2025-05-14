@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="CSS/styles.css">
 
     <style>
+        /*Introduction div styles*/
         #introduction {
             display: block;
             font-family: Verdana, Geneva, Tahoma, sans-serif; /* Sets the font family */
             color: #E6E6E6; /* Sets the text color to a neutral tone */
             font-size: medium; /* Sets the font size */
             padding: 25px; /* Adds padding inside the main content */
-            margin: 10px; /* Adds margin around the main content */
+            margin: 20px; /* Adds margin around the main content */
+            background-color: #4169E1;
+            border-radius: 10px;
         }
 
+        /*F layouting styling for the main sections*/
         .F-layout {
                 display: grid;
                 grid-template-columns: 30% 1fr;
@@ -34,6 +38,7 @@
             .F-layout > main     { grid-area: main; }
             /*.F-layout > footer   { grid-area: footer; }*/
 
+            /*Sidebar for quick links styling*/
             .sidebar {
                 background: #E6E6E6;             
                 padding: 1.5rem;                  
@@ -49,6 +54,7 @@
                 left: 10;
             }
 
+            /*Sidebar anchor styling*/
             .sidebar a{
                 text-decoration: none; /* Removes underline from links */
                 color: #2C2C2C; /* Sets link color to a neutral tone */
@@ -58,11 +64,13 @@
                 
             }
 
+            /*Sidebar anchor hover styling*/
             .sidebar a:hover {
                 color: #53D553; /* Changes link color to the primary color on hover */
                 text-decoration: underline; /* Underlines text on hover */
             }
 
+            /*Sidebar h4 headings styling*/
             .sidebar h4{
                 font-size: 1.6rem; /* Sets the font size */
                 color: #2C2C2C; /* Sets the text color to a neutral tone */
@@ -70,13 +78,20 @@
                 text-align: center; /* Centers text inside the link */
                 text-decoration: underline;
             }
+
+            /*Hr line styling*/
+            hr {
+                border: 5px solid #53D553;
+                border-radius: 5px;
+            }
     </style>
+
 </head>
 
 
 
 <body>
-    
+    <!--Header section-->
         <header>
         <a href="index.html">
             <img src="Images/text-1747182718558.png" alt="Header saying Naawi-Oodena ">
@@ -90,6 +105,7 @@
         </nav>
     </header>
 
+    <!--F layout content area-->
     <div class="F-layout">
         <div id="introduction">
                 <h1><b><u>Naawi Oodena</u></b></h1>
@@ -105,6 +121,8 @@
                 </p>
                 
             </div>
+
+        <!--Main content beginin, might seem rough but the top is not part of either main or header so is separate-->    
     <main>
         <section class="breakdown">
             
@@ -113,10 +131,13 @@
             <hr>
             <br>
 
-            
+
+            <!--Residential section-->
             <article id="residential">
                 <div id="header-1"><h1><b><u>Residential (lower density and medium density)</u></b></h1></div>
                 <br>
+
+                <!--medium density section-->
                 <div id="medium-density">
                     <h3><i>Medium Density - Located along Kenaston Boulevard.</i></h3>
                     <p>
@@ -145,6 +166,7 @@
                 <hr>
                 <br>
 
+                <!--Lower density section-->
                 <div id="lower-density">
                     <h3><i>Lower Density - Located along Kenaston Boulevard</i></h3>
                     <p>
@@ -173,6 +195,7 @@
             <hr>
             <br>
 
+            <!--Sports and recreation section-->
             <article id="sports-recreation">
                 <h3><i>Sports and Recreation</i></h3>
                 <p>
@@ -201,6 +224,7 @@
             <hr>
             <br>
 
+            <!--Cultural campus section-->
             <article id="cultural-campus-education">
                 <h3><i>Cultural Campus and Education</i></h3>
                 <p>
@@ -229,6 +253,7 @@
             <hr>
             <br>
 
+            <!--Community Spaces section-->
             <article id="community-spaces">
                 <h3><i>Community Spaces</i></h3>
                 <p>
@@ -262,6 +287,7 @@
             <hr>
             <br>
             
+            <!--Mixed Use village section-->
             <article id="mixed-use-village">
                 <h3><i>Mixed-Use Village</i></h3>
                 <p>Located along Grant Avenue, the Mixed-Use Village is functions as a vibrant, higher-density corridor that blends residential, retail, and cultural functions. This district features support walkability, includes future rapid transit infrastructure, and provide a welcoming urban entry point to the broader development. The goal is to create a dynamic urban environment that reflects community values while addressing housing needs and public space quality.</p>
@@ -287,6 +313,8 @@
             <hr>
             <br>
 
+
+            <!--commercial mixed use section-->
             <article id="commercial-mixed-use">
                 <h3><i>Commercial Mixed-Use</i></h3>
                 <p>Situated along key corridors such as Kenaston Boulevard, the Commercial Mixed-Use designation is intended to support a robust range of retail, service, office, and cultural uses that serve both the surrounding neighbourhoods and the broader Treaty 1 and Winnipeg communities. This area will function as a vibrant, accessible commercial hub with high design standards and thoughtful integration of transportation options.</p>
@@ -313,6 +341,7 @@
             <hr>
             <br>
 
+            <!--Community design highlights section-->
             <article id="community-design-highlights">
                 <h3><i>Community Design Highlights</i></h3>
                 <p>
@@ -332,6 +361,7 @@
             <hr>
             <br>
 
+            <!--Sustainability innovation section-->
             <article id="sustainability-innovation">
                 <h3><i>Sustainability &amp; Innovation</i></h3>
                 <p>
@@ -349,6 +379,8 @@
             <hr>
             <br>
 
+
+            <!--Culurtal identity section-->
             <article id="cultural-identity">
                 <h3><i>Cultural &amp; Architectural Identity</i></h3>
                 <p>
@@ -363,8 +395,10 @@
 
             <br>
             <hr>
-            <br>
+            <br>    
 
+
+            <!--Infrasturture connectiviity section-->
             <article id="infrastructure-connectivity">
                 <h3><i>Infrastructure &amp; Connectivity</i></h3>
                 <p>
@@ -385,6 +419,13 @@
                     Together, these components establish a phased, resilient framework that aligns land use, design, sustainability, culture, and infrastructure—setting a new benchmark for Indigenous-led urban development.
                 </p>
             </article>
+
+            <br>
+            <hr>
+            <br>
+            
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cwM08UJRQR0?si=S2cPAb8lqUYpMkFt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/ODH13-YOeyE?si=b6SIBB5S1QVxXlcX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
             <br>
             <div id="source">
