@@ -42,6 +42,9 @@
             flex: 1; /* Takes up 1 part */
             display: block;
             margin: 0;
+            animation: 
+            typewriter 5s steps(50) 1s 1 normal both, 
+            blinkingCursor 500ms steps(50) infinite normal;
         }
 
         /* Styling for the image section within home info */
@@ -54,6 +57,29 @@
         #home-image img {
             width: 120%;
             height: auto;
+        }
+
+        /* Cursor */
+        .cursor{
+            position: relative;
+            width: 24em;
+            margin: 0 auto;
+            border-right: 2px solid rgba(255,255,255,.75);
+            font-size: 30px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);    
+        }
+
+        @keyframes typewriter {
+        from { width: 0; }
+        to { width: 100%; }
+        }
+        
+        @keyframes blinkingCursor{
+        from { border-right-color: rgba(255,255,255,.75); }
+        to { border-right-color: transparent; }
         }
     </style>
 </head>
@@ -79,7 +105,7 @@
         <!-- Section for home information -->
         <section id="home-info">
             <!-- Text content for the home section -->
-            <div id="home-text">
+            <div id="cursor home-text">
                 <h1>Welcome to Naawi Oodena!</h1>
                 <p>We plan to break down the city to present in this website, in the following format:</p>
                 <ul>
