@@ -27,7 +27,7 @@
 
     <!-- Internal CSS for specific styles -->
     <style>
-        /* Styling for the home info section */
+        /* Layout for the home info section */
         #home-info {
             display: flex;
             flex-direction: row;
@@ -37,32 +37,29 @@
             align-items: center; /* Vertically align text and image */
         }
 
-        /* Styling for the text section within home info */
+        /* Text area styling in home info */
         #home-text {
             flex: 1; /* Takes up 1 part */
             display: block;
             margin: 0;
-            animation: 
-            typewriter 5s steps(50) 1s 1 normal both, 
-            blinkingCursor 500ms steps(50) infinite normal;
         }
 
-        /* Styling for the image section within home info */
+        /* Image area styling in home info */
         #home-image {
             flex: 2; /* Takes up 2 parts */
             display: block;
         }
 
-        /* Styling for the image inside the home image section */
+        /* Image sizing inside home image */
         #home-image img {
             width: 120%;
             height: auto;
         }
 
-        /* Cursor */
-        #cursor{
+        /* Cursor effect for typewriter animation */
+        .cursor{
             position: relative;
-            width: 24em;
+            width: 24px;
             margin: 0 auto;
             border-right: 2px solid rgba(255,255,255,.75);
             font-size: 30px;
@@ -72,15 +69,21 @@
             transform: translateY(-50%);    
         }
 
+        /* Typewriter animation for heading */
+        .typewriter-animation {
+            animation: 
+                typewriter 5s steps(50) 1s 1 normal both, 
+                blinkingCursor 500ms steps(50) infinite normal;
+        }
         @keyframes typewriter {
-        from { width: 0; }
-        to { width: 100%; }
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        @keyframes blinkingCursor{
+            from { border-right-color: rgba(255,255,255,.75); }
+            to { border-right-color: transparent; }
         }
 
-        @keyframes blinkingCursor{
-        from { border-right-color: rgba(255,255,255,.75); }
-        to { border-right-color: transparent; }
-        }
     </style>
 </head>
 <body>
@@ -105,8 +108,9 @@
         <!-- Section for home information -->
         <section id="home-info">
             <!-- Text content for the home section -->
-            <div id="cursor home-text">
-                <h1>Welcome to Naawi Oodena!</h1>
+            <div id="home-text">
+                <!-- Animated heading -->
+                <h1 class="cursor typewriter-animation">Welcome to Naawi Oodena!</h1>
                 <p>We plan to break down the city to present in this website, in the following format:</p>
                 <ul>
                     <li>Residential (lower density and medium density)</li>
