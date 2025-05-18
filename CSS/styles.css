@@ -1,62 +1,73 @@
 /* 
-    I chose a triadic color family with my neutral colors chosen for harmony and accessibility. 
-
-    These colors are: 
-
-    Malachite (##53D553) – To represent the land, growth, and the natural spirit of Naawi-Oodena (also the green on the Treaty 1 flag). Primary color 
-
-    Gold (#FFD700) – To represent the sun and vitality, reflecting both energy and ceremony (also the sun on the Treaty 1 flag). Secondary color 
-
-    Royal Blue (#4169E1) – To represent the sky and water, both deeply tied to cultural identity and life (also the  blue on the Treaty 1 flag). Second secondary color 
-
-    Platinum (#E6E6E6) – This represents a city scape (since the m,ost common color in cities is grey due to roads and concrete, and it also provides a soft background. Neutral color for background 
-
-    Jet (#2C2C2C) – This is most suitable for writing. Second neutral color for text 
-
-    Overall, all these colors represent the purpose of the site, which is to explore Naawi-Oodena. So, using Indigenous colors (or colors related to their culture, flag and land) will be most suitable.  
+    ============================
+    COLOR PALETTE & DESIGN NOTES
+    ============================
+    - Malachite (#53D553): Represents land, growth, and the natural spirit of Naawi-Oodena (primary color, green from Treaty 1 flag).
+    - Gold (#FFD700): Represents the sun, vitality, energy, and ceremony (secondary color, sun from Treaty 1 flag).
+    - Royal Blue (#4169E1): Represents sky and water, tied to cultural identity and life (second secondary color, blue from Treaty 1 flag).
+    - Platinum (#E6E6E6): Represents cityscape, provides a soft, neutral background.
+    - Jet (#2C2C2C): Used for text, provides high contrast and readability.
+    - All colors chosen for harmony, accessibility, and cultural relevance.
 */
 
 /* 
-    Global box-sizing and line-height for consistency and readability
+    ============================
+    GLOBAL STYLES
+    ============================
+*/
+
+/* 
+    Set box-sizing to border-box for all elements for predictable sizing.
+    Set a consistent line-height for improved readability.
 */
 * {
-    box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-    line-height: 160%; /* Sets a consistent line height for better readability */
+    line-height: 160%; /* Consistent vertical spacing for text */
 }
 
 /* 
-    Set base font size for easier rem calculations
+    Set base font size to 62.5% (10px) for easier rem calculations throughout the stylesheet.
 */
 html {
-    font-size: 62.5%; /* Sets base font size to 10px for easier rem calculations */
+    font-size: 62.5%;
 }
 
 /* 
-    Body styles: background, spacing, and typography
+    ============================
+    BODY STYLES
+    ============================
+    - Sets background, spacing, and base typography.
+    - Applies font smoothing for better rendering.
 */
 body {
-    background-color: #2C2C2C; /* Neutral background color for accessibility */
+    background-color: #2C2C2C; /* Jet: dark, neutral background for contrast */
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 10px;
-    margin: 10px;
-    font-size: 1.8rem;
-    word-spacing: 0.4rem;
-    letter-spacing: 0.04rem;
-    -webkit-font-smoothing: antialiased; /* Smoothens font rendering on Webkit */
-    -moz-osx-font-smoothing: grayscale; /* Smoothens font rendering on Mozilla */
+    padding: 10px; /* Space inside the body */
+    margin: 10px;  /* Space outside the body */
+    font-size: 1.8rem; /* Base font size for body text */
+    word-spacing: 0.2rem; /* Slightly increased word spacing for readability */
+    letter-spacing: 0.1rem; /* Slightly increased letter spacing */
+    -webkit-font-smoothing: antialiased; /* Smoother font rendering on Webkit browsers */
+    -moz-osx-font-smoothing: grayscale;  /* Smoother font rendering on Mozilla browsers */
 }
-
 /* 
-    Header styles: layout, color, and typography
+    ============================
+    HEADER STYLES
+    ============================
+    - Sets background, spacing, and typography for the header.
+    - Applies flexbox for layout.
+*/
+/* 
+    Header styles: layout, background, and typography
 */
 header {
-    background-color: #228B22;
+    background-color: #53D553;
     padding: 20px 50px;
     display: flex;
     -webkit-display: flex;
@@ -70,7 +81,7 @@ header {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     border: 2px solid gray;
-    color: #E6E6E6;
+    color: #2C2C2C;
 }
 
 /* 
@@ -78,7 +89,7 @@ header {
 */
 header a {
     text-decoration: none;
-    color: #E6E6E6;
+    color: #2C2C2C;
 }
 
 /* 
@@ -103,7 +114,7 @@ nav {
 */
 nav a {
     text-decoration: none;
-    color: #E6E6E6;
+    color: #2C2C2C;
     margin-left: 20px;
 }
 
@@ -121,13 +132,14 @@ nav form #content {
 nav a:hover {
     color: #FFD700;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 /* 
     Main content styles: typography and spacing
 */
 main {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     color: #E6E6E6;
     font-size: medium;
     padding: 25px;
@@ -141,7 +153,7 @@ h1 {
     text-transform: uppercase;
     -webkit-text-transform: uppercase;
     -moz-text-transform: uppercase;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: 600;
     font-size: 4rem;
 }
@@ -149,13 +161,13 @@ h1 {
 h2 {
     font-style: italic;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 3.2rem;
 }
 
 h3 {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
 }
 
 /* 
@@ -171,7 +183,7 @@ a {
     General link hover effect
 */
 a:hover {
-    color: #228B22;
+    color: #53D553;
 }
 
 /* 
@@ -181,7 +193,7 @@ sub a {
     display: inline;
     text-decoration: none;
     color: #FFD700;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1.6rem;
 }
 
@@ -189,7 +201,7 @@ sub a {
     Sub-element link hover effect
 */
 sub a:hover {
-    color: #228B22;
+    color: #53D553;
 }
 
 /* 
@@ -277,4 +289,4 @@ footer h4 a:hover {
 */
 hr {
     border: 1px solid #E6E6E6;
-}
+} 
