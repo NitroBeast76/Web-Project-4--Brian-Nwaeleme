@@ -19,6 +19,11 @@
             background: #E6E6E6;
             border-radius: 10px;
             color: #2C2C2C;
+
+            /* Vendor prefixes for border-radius */
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
         }
 
         /* FORM HEADER STYLES */
@@ -35,7 +40,17 @@
         /* FORM LAYOUT STYLES */
         .contact-form {
             display: grid;
+
+            /* Vendor prefixes for grid display */
+            display: -ms-grid; /* IE10+ */
+            display: grid;
+
             gap: 1.5rem;
+
+            /* Vendor prefixes for gap */
+            -webkit-column-gap: 1.5rem;
+            -moz-column-gap: 1.5rem;
+            column-gap: 1.5rem;
         }
 
         /* FORM INPUT GROUP STYLES */
@@ -49,10 +64,20 @@
             width: 100%;
             padding: 0.8rem;
             border: 2px solid #53D553;
+
+            /* Vendor prefixes for border-radius */
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
             border-radius: 4px;
+
             background: #E6E6E6;
             color: #2C2C2C;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+            /* Vendor prefix for box-sizing for better sizing control */
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
         }
 
         /* SUBMIT BUTTON STYLES */
@@ -62,7 +87,14 @@
             border: 2px solid #2C2C2C;
             padding: 1rem 2rem;
             font-weight: 600;
+
+            /* Vendor prefixes for transition */
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
             transition: all 0.2s ease;
+
+            cursor: pointer; /* Make sure pointer cursor on button */
         }
         .submit-btn:hover {
             background: #FFD700;
@@ -74,12 +106,22 @@
             background: #4169E1;
             color: #E6E6E6;
             border: 2px solid #53D553;
+
+            /* Vendor prefixes for border-radius */
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+
+            padding: 1rem;
+            margin-top: 1rem;
         }
 
         /* REQUIRED FIELD INDICATOR */
         .required {
             color: #FFD700;
         }
+        
+
     </style>
 </head>
 
@@ -101,41 +143,84 @@
     <!-- MAIN CONTENT SECTION -->
     <main>
         <!-- CONTACT FORM CONTAINER -->
-        <div class="contact-container">
+        <div class="contact-container" role="form" aria-labelledby="form-header-title" aria-describedby="form-description">
+            
             <!-- FORM HEADER -->
             <div class="form-header">
-                <h1>Naawi Odeena City Information</h1>
-                <p>Have questions about our city? Reach out to us using the form below.</p>
+                <h1 id="form-header-title">Naawi Odeena City Information Contact Form</h1>
+                <p id="form-description">If you have any questions, feedback, or requests about our city developments and community programs, please fill out this form and we will respond promptly.</p>
             </div>
 
             <!-- CONTACT FORM -->
-            <form class="contact-form" id="contactForm">
+            <form class="contact-form" id="contactForm" novalidate aria-live="polite">
+                
                 <!-- PERSONAL INFORMATION FIELDSET -->
                 <fieldset>
                     <legend>Personal Information</legend>
+                    
                     <div class="form-group">
-                        <label for="name">Full Name <span class="required">*</span></label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                        <label for="name">
+                            Full Name <span class="required" aria-label="required">*</span>
+                        </label>
+                        <input 
+                            type="text" 
+                            id="name" 
+                            name="name" 
+                            required 
+                            placeholder="Enter your full name, e.g. John Doe" 
+                            aria-required="true" 
+                            aria-describedby="nameHelp"
+                        >
+                        <small id="nameHelp" class="form-text">Please provide your first and last name.</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        <label for="email">
+                            Email Address <span class="required" aria-label="required">*</span>
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            required 
+                            placeholder="Enter a valid email, e.g. john@example.com" 
+                            aria-required="true" 
+                            aria-describedby="emailHelp"
+                        >
+                        <small id="emailHelp" class="form-text">We’ll use this email to respond to your inquiry.</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890">
+                        <label for="phone">Phone Number (Optional)</label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone" 
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" 
+                            placeholder="Format: 123-456-7890" 
+                            aria-describedby="phoneHelp"
+                        >
+                        <small id="phoneHelp" class="form-text">Include area code. Format: 123-456-7890</small>
                     </div>
                 </fieldset>
 
                 <!-- INQUIRY DETAILS FIELDSET -->
                 <fieldset>
                     <legend>Inquiry Details</legend>
+                    
                     <div class="form-group">
-                        <label for="subject">Inquiry Category <span class="required">*</span></label>
-                        <select id="subject" name="subject" required class="cultural-select">
-                            <option value="">Select a community aspect</option>
+                        <label for="subject">
+                            Inquiry Category <span class="required" aria-label="required">*</span>
+                        </label>
+                        <select 
+                            id="subject" 
+                            name="subject" 
+                            required 
+                            class="cultural-select" 
+                            aria-required="true" 
+                            aria-describedby="subjectHelp"
+                        >
+                            <option value="" disabled selected>Select a community aspect</option>
                             <option value="residential">Residential Development (Low/Medium Density)</option>
                             <option value="recreation">Sports & Recreation Facilities</option>
                             <option value="cultural-campus">Cultural Campus & Education</option>
@@ -147,24 +232,37 @@
                             <option value="cultural-design">Cultural & Architectural Identity</option>
                             <option value="events">Community Events & Programming</option>
                         </select>
+                        <small id="subjectHelp" class="form-text">Choose the category that best matches your inquiry.</small>
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Message <span class="required">*</span></label>
-                        <textarea id="message" name="message" required placeholder="Type your message here..."></textarea>
+                        <label for="message">
+                            Message <span class="required" aria-label="required">*</span>
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            required 
+                            placeholder="Type your detailed message or question here..." 
+                            rows="5" 
+                            aria-required="true" 
+                            aria-describedby="messageHelp"
+                        ></textarea>
+                        <small id="messageHelp" class="form-text">Please provide as much detail as possible to help us assist you better.</small>
                     </div>
                 </fieldset>
 
                 <!-- FORM SUBMISSION BUTTON -->
-                <button type="submit" class="submit-btn">Send Message</button>
+                <button type="submit" class="submit-btn" aria-label="Send your message to Naawi Odeena City Information team">Send Message</button>
             </form>
 
             <!-- CONFIRMATION MESSAGE -->
             <br>
-            <div class="confirmation-message" id="confirmation">
-                <p> Thank you for your message! We'll try to respond as soon as possible.</p>
+            <div class="confirmation-message" id="confirmation" aria-live="polite" role="alert" hidden>
+                <p>Thank you for your message! We’ll try to respond as soon as possible.</p>
             </div>
         </div>
+
     </main>
 
     <!-- FOOTER SECTION -->

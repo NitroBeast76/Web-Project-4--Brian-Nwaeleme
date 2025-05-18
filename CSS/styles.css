@@ -15,11 +15,15 @@
 
     Overall, all these colors represent the purpose of the site, which is to explore Naawi-Oodena. So, using Indigenous colors (or colors related to their culture, flag and land) will be most suitable.  
 */
+
 /* 
     Global box-sizing and line-height for consistency and readability
 */
 * {
     box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
     line-height: 160%; /* Sets a consistent line height for better readability */
 }
 
@@ -35,195 +39,219 @@ html {
 */
 body {
     background-color: #2C2C2C; /* Neutral background color for accessibility */
-    box-sizing: border-box; /* Ensures consistent box model behavior */
-    padding: 10px; /* Adds padding around the body */
-    margin: 10px; /* Adds margin around the body */
-    font-size: 1.8rem; /* Sets a readable default font size */
-    word-spacing: 0.4rem; /* Improves readability by adding word spacing */
-    letter-spacing: 0.04rem; /* Adds slight letter spacing for clarity */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: 10px;
+    font-size: 1.8rem;
+    word-spacing: 0.4rem;
+    letter-spacing: 0.04rem;
+    -webkit-font-smoothing: antialiased; /* Smoothens font rendering on Webkit */
+    -moz-osx-font-smoothing: grayscale; /* Smoothens font rendering on Mozilla */
 }
 
 /* 
     Header styles: layout, color, and typography
 */
 header {
-    background-color: #228B22; /* Primary color for the header background */
-    padding: 20px 50px; /* Adds padding inside the header */
-    align-items: center; /* Vertically centers items */
-    justify-content: space-between; /* Distributes items evenly */
-    text-align: center; /* Centers text horizontally */
-    font-family: Arial, Helvetica, sans-serif; /* Sets a clean, sans-serif font */
-    display: flex; /* Uses flexbox for layout */
-    border: 2px solid gray; /* Adds a border for visual separation */
-    color: #E6E6E6; /* Neutral text color for contrast */
+    background-color: #228B22;
+    padding: 20px 50px;
+    display: flex;
+    -webkit-display: flex;
+    -ms-flexbox: flex;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid gray;
+    color: #E6E6E6;
 }
 
 /* 
     Header link styles
 */
 header a {
-    text-decoration: none; /* Removes underline from links */
-    color: #E6E6E6; /* Matches the header text color */
+    text-decoration: none;
+    color: #E6E6E6;
 }
 
 /* 
     Navigation styles: layout and spacing
 */
 nav {
-    font-size: larger; /* Increases font size for better visibility */
-    display: flex; /* Uses flexbox for layout */
-    padding: 20px; /* Adds padding inside the navigation */
-    justify-content: space-between; /* Distributes items evenly */
-    align-items: center; /* Vertically centers items */
+    font-size: larger;
+    display: flex;
+    -webkit-display: flex;
+    -ms-flexbox: flex;
+    padding: 20px;
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    align-items: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
 }
 
 /* 
     Navigation link styles
 */
 nav a {
-    text-decoration: none; /* Removes underline from links */
-    color: #E6E6E6; /* Neutral link color */
-    margin-left: 20px; /* Adds spacing between links */
+    text-decoration: none;
+    color: #E6E6E6;
+    margin-left: 20px;
 }
 
 /* 
     Navigation form content styles
 */
 nav form #content {
-    height: 30px; /* Sets a fixed height for form content */
-    border: 2px solid grey; /* Adds a border for emphasis */
+    height: 30px;
+    border: 2px solid grey;
 }
 
 /* 
     Navigation link hover effect
 */
 nav a:hover {
-    color: #FFD700; /* Secondary color for hover effect */
-    text-decoration: underline; /* Adds underline on hover */
+    color: #FFD700;
+    text-decoration: underline;
 }
 
 /* 
     Main content styles: typography and spacing
 */
 main {
-    font-family: Verdana, Geneva, Tahoma, sans-serif; /* Clean, readable font */
-    color: #E6E6E6; /* Neutral text color */
-    font-size: medium; /* Sets a standard font size */
-    padding: 25px; /* Adds padding inside the main content */
-    margin: 10px; /* Adds margin around the main content */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #E6E6E6;
+    font-size: medium;
+    padding: 25px;
+    margin: 10px;
 }
 
 /* 
     Heading styles for h1, h2, h3
 */
 h1 {
-    text-transform: uppercase; /* Converts text to uppercase for emphasis */
-    font-family: Arial, Helvetica, sans-serif; /* Clean, sans-serif font */
-    font-weight: 600; /* Semi-bold for better visibility */
-    font-size: 4rem; /* Sets a larger font size */
+    text-transform: uppercase;
+    -webkit-text-transform: uppercase;
+    -moz-text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 4rem;
 }
 
 h2 {
-    font-style: italic; /* Adds emphasis with italics */
-    font-weight: 600; /* Semi-bold for better visibility */
-    font-size: 3rem; /* Sets a larger font size */
+    font-style: italic;
+    font-weight: 600;
+    font-size: 3rem;
 }
 
 h3 {
-    font-family: Arial, Helvetica, sans-serif; /* Clean, sans-serif font */
-    font-weight: 600; /* Semi-bold for better visibility */
-    font-size: 2.5rem; /* Sets a larger font size */
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 2.5rem;
 }
 
 /* 
     General link styles
 */
 a {
-    text-decoration: none; /* Removes underline from links */
-    color: #FFD700; /* Second secondary color for links */
-    font-size: 1.6rem; /* Sets a readable font size */
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 1.6rem;
 }
 
 /* 
     General link hover effect
 */
 a:hover {
-    color: #228B22; /* Secondary color for hover effect */
+    color: #228B22;
 }
 
 /* 
     Sub-element link styles
 */
 sub a {
-    display: inline; /* Keeps links inline */
-    text-decoration: none; /* Removes underline */
-    color: #FFD700; /* Matches general link color */
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; /* Bold, impactful font */
-    font-size: 1.6rem; /* Matches general link font size */
+    display: inline;
+    text-decoration: none;
+    color: #FFD700;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.6rem;
 }
 
 /* 
     Sub-element link hover effect
 */
 sub a:hover {
-    color: #228B22; /* Matches hover effect for general links */
+    color: #228B22;
 }
 
 /* 
     Button styles: background, border, and text color
 */
 button {
-    background-color: #53D553; /* Primary color for buttons */
-    border: 2px solid #4169E1; /* Adds a blue border for contrast */
-    color: #FFD700; /* Secondary color for text */
+    background-color: #53D553;
+    border: 2px solid #4169E1;
+    color: #FFD700;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    -moz-transition: background-color 0.3s, color 0.3s;
+    -ms-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* 
     Button hover effect
 */
 button:hover {
-    background-color: #FFD700; /* Secondary color for hover effect */
-    color: #2C2C2C; /* Neutral text color on hover */
+    background-color: #FFD700;
+    color: #2C2C2C;
 }
 
 /* 
     Figcaption link styles
 */
 figcaption a {
-    font-style: italic; /* Adds emphasis with italics */
-    text-decoration: none; /* Removes underline */
-    color: #E6E6E6; /* Neutral link color */
-    margin-right: 5px; /* Adds spacing to the right */
-    display: flex; /* Uses flexbox for layout */
+    font-style: italic;
+    text-decoration: none;
+    color: #E6E6E6;
+    margin-right: 5px;
+    display: flex;
+    -webkit-display: flex;
+    -ms-flexbox: flex;
 }
 
 /* 
     Figcaption link hover effect
 */
 figcaption a:hover {
-    color: #53D553; /* Primary color for hover effect */
+    color: #53D553;
 }
 
 /* 
     Footer styles: layout, background, and typography
 */
 footer {
-    text-align: center; /* Centers text horizontally */
-    font-size: medium; /* Sets a standard font size */
-    font-family: serif; /* Adds a classic serif font */
-    background-color: #FFD700; /* Second secondary color for background */
-    padding: 60px; /* Adds padding inside the footer */
-    margin: 0; /* Removes default margin */
-    height: 10%; /* Sets a fixed height */
+    text-align: center;
+    font-size: medium;
+    font-family: serif;
+    background-color: #FFD700;
+    padding: 60px;
+    margin: 0;
+    height: 10%;
 }
 
 /* 
     Footer heading styles
 */
 footer h4 {
-    display: inline; /* Keeps heading inline */
-    color: #4169E1; /* Neutral text color */
-    font-size: medium; /* Matches footer font size */
+    display: inline;
+    color: #4169E1;
     font-size: 2rem;
 }
 
@@ -231,22 +259,22 @@ footer h4 {
     Footer link styles
 */
 footer h4 a {
-    display: inline; /* Keeps links inline */
-    color: #2C2C2C; /* Matches footer text color */
-    text-decoration: underline; /* Underlines links */
-    font-size: 2rem; /* Sets a readable font size */
+    display: inline;
+    color: #2C2C2C;
+    text-decoration: underline;
+    font-size: 2rem;
 }
 
 /* 
     Footer link hover effect
 */
 footer h4 a:hover {
-    color: #4169E1; /* Primary color for hover effect */
+    color: #4169E1;
 }
 
 /* 
     Horizontal rule styles
 */
 hr {
-    border: 1px solid #E6E6E6; /* Neutral border color */
+    border: 1px solid #E6E6E6;
 }
