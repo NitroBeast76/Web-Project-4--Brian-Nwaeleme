@@ -27,87 +27,61 @@
 
     <!-- Internal CSS for specific styles -->
     <style>
-        /* Layout for the home info section using Flexbox */
+        /* Layout for the home info section */
         #home-info {
-            display: -webkit-box;       /* Legacy iOS, Safari, old Android */
-            display: -ms-flexbox;       /* IE10 */
-            display: flex;              /* Modern browsers */
-            -webkit-flex-direction: row; /* Safari 6.1+ */
-            -ms-flex-direction: row;     /* IE10 */
-            flex-direction: row;         /* Arrange children in a row */
-            gap: 40px;                   /* Space between items */
-            padding: 60px 100px 60px 20px; /* Padding around the section */
-            margin: 30px;                /* Margin outside the section */
-            -webkit-align-items: center; /* Safari 7+ */
-            -ms-flex-align: center;      /* IE10 */
-            align-items: center;         /* Vertically center items */
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+            padding: 60px 100px 60px 20px;
+            margin: 30px;
+            align-items: center; /* Vertically align text and image */
         }
 
         /* Text area styling in home info */
         #home-text {
-            -webkit-box-flex: 1;    /* Legacy WebKit: allow to grow */
-            -ms-flex: 1;            /* IE10: allow to grow */
-            flex: 1;                /* Takes up 1 part of available space */
-            display: block;         /* Block display for layout */
-            margin: 0;              /* Remove default margin */
+            flex: 1; /* Takes up 1 part */
+            display: block;
+            margin: 0;
         }
 
         /* Image area styling in home info */
         #home-image {
-            -webkit-box-flex: 2;    /* Legacy WebKit: allow to grow more */
-            -ms-flex: 2;            /* IE10: allow to grow more */
-            flex: 2;                /* Takes up 2 parts of available space */
-            display: block;         /* Block display for layout */
+            flex: 2; /* Takes up 2 parts */
+            display: block;
         }
 
         /* Image sizing inside home image */
         #home-image img {
-            width: 120%;            /* Make image slightly larger than container */
-            height: auto;           /* Maintain aspect ratio */
+            width: 120%;
+            height: auto;
         }
 
         /* Cursor effect for typewriter animation */
-        .cursor {
-            position: relative;     /* Position for pseudo-elements */
-            width: 24px;            /* Set width for animation */
-            margin: 0 auto;         /* Center horizontally */
-            border-right: 2px solid rgba(255, 255, 255, 0.75); /* Blinking cursor */
-            font-size: 30px;        /* Larger font size */
-            text-align: center;     /* Center text */
-            white-space: nowrap;    /* Prevent text wrapping */
-            overflow: hidden;       /* Hide overflow for animation */
-            -webkit-transform: translateY(-50%);  /* Safari: vertical alignment */
-            transform: translateY(-50%);          /* Vertical alignment */
+        .cursor{
+            position: relative;
+            width: 24px;
+            margin: 0 auto;
+            border-right: 2px solid rgba(255,255,255,.75);
+            font-size: 30px;
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            transform: translateY(-50%);    
         }
 
         /* Typewriter animation for heading */
         .typewriter-animation {
-            -webkit-animation: 
-            typewriter 5s steps(50) 1s 1 normal both, 
-            blinkingCursor 500ms steps(50) infinite normal; /* Safari/legacy */
             animation: 
-            typewriter 5s steps(50) 1s 1 normal both, 
-            blinkingCursor 500ms steps(50) infinite normal; /* Modern browsers */
-        }
-
-        /* Keyframes for typewriter effect */
-        @-webkit-keyframes typewriter {
-            from { width: 0; }      /* Start with no width */
-            to { width: 100%; }     /* Animate to full width */
+                typewriter 5s steps(50) 1s 1 normal both, 
+                blinkingCursor 500ms steps(50) infinite normal;
         }
         @keyframes typewriter {
-            from { width: 0; }      /* Start with no width */
-            to { width: 100%; }     /* Animate to full width */
+            from { width: 0; }
+            to { width: 100%; }
         }
-
-        /* Keyframes for blinking cursor effect */
-        @-webkit-keyframes blinkingCursor {
-            from { border-right-color: rgba(255, 255, 255, 0.75); } /* Visible */
-            to { border-right-color: transparent; }                 /* Invisible */
-        }
-        @keyframes blinkingCursor {
-            from { border-right-color: rgba(255, 255, 255, 0.75); } /* Visible */
-            to { border-right-color: transparent; }                 /* Invisible */
+        @keyframes blinkingCursor{
+            from { border-right-color: rgba(255,255,255,.75); }
+            to { border-right-color: transparent; }
         }
 
     </style>

@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="CSS/styles.css">
 
     <style>
-        /* Introduction div styles */
+        /*Introduction div styles*/
         #introduction {
             display: block;
             font-family: Verdana, Geneva, Tahoma, sans-serif; /* Sets the font family */
@@ -16,109 +16,79 @@
             font-size: medium; /* Sets the font size */
             padding: 25px; /* Adds padding inside the main content */
             margin: 20px; /* Adds margin around the main content */
-            background-color: #4169E1; /* Sets background to secondary color */
-            border-radius: 10px; /* Adds rounded corners */
-            -webkit-border-radius: 10px; /* WebKit border-radius */
-            -moz-border-radius: 10px; /* Mozilla border-radius */
+            background-color: #4169E1;
+            border-radius: 10px;
         }
 
-        /* 
-            Hover effect for sub-anchor links inside the introduction div
-        */
         #introduction span > sub > a:hover {
             color: #E6E6E6;
             text-decoration: underline;
         }
 
-        /* 
-            F-layout styling for the main sections
-        */
+        /*F layouting styling for the main sections*/
         .F-layout {
-            display: grid;
-            -webkit-display: grid;
-            -ms-grid: grid;
-            grid-template-columns: 30% 1fr;
-            grid-template-rows: auto 1fr auto;
-            grid-template-areas:
-                "introduction introduction"
-                "sidebar main";
-            min-height: 100vh;
-            align-content: center;
-            -webkit-align-content: center;
-            -ms-align-content: center;
+                display: grid;
+                grid-template-columns: 30% 1fr;
+                grid-template-rows: auto 1fr auto;
+                grid-template-areas:
+                    "introduction introduction"
+                    "sidebar main"
+                    /*"footer footer"*/;
+                min-height: 100vh;
+                align-content: center;
         }
 
-        /* Grid area assignments for the F-layout */
-        .F-layout > #introduction {
-            grid-area: introduction;
-        }
+            .F-layout > #introduction  { grid-area: introduction; }
+            .F-layout > .sidebar { grid-area: sidebar; }
+            .F-layout > main     { grid-area: main; }
+            /*.F-layout > footer   { grid-area: footer; }*/
 
-        .F-layout > .sidebar {
-            grid-area: sidebar;
-        }
+            /*Sidebar for quick links styling*/
+            .sidebar {
+                background: #E6E6E6;             
+                padding: 1.5rem;                  
+                border-right: 2px solid #53D553;  
+                width: auto;
+                margin-bottom: 10rem;
+                margin-top: 0rem;
+                border-radius: 10px;
+                align-self: top; /* Aligns the sidebar to the start */
+                height: 10%;
+                position: sticky; /* Makes the sidebar fixed */
+                top: 0;
+                left: 10;
+            }
 
-        .F-layout > main {
-            grid-area: main;
-        }
+            /*Sidebar anchor styling*/
+            .sidebar a{
+                text-decoration: none; /* Removes underline from links */
+                color: #2C2C2C; /* Sets link color to a neutral tone */
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center; /* Centers text inside the link */
+                font-size: 1.6rem;
+                
+            }
 
-        /* 
-            Sidebar for quick links styling
-        */
-        .sidebar {
-            background: #E6E6E6;             
-            padding: 1.5rem;                  
-            border-right: 2px solid #53D553;  
-            width: auto;
-            margin-bottom: 10rem;
-            margin-top: 0rem;
-            border-radius: 10px;
-            align-self: top; /* Aligns the sidebar to the start */
-            height: 10%;
-            position: sticky; /* Makes the sidebar fixed */
-            top: 0;
-            left: 10px;
-        }
+            /*Sidebar anchor hover styling*/
+            .sidebar a:hover {
+                color: #53D553; /* Changes link color to the primary color on hover */
+                text-decoration: underline; /* Underlines text on hover */
+            }
 
-        /* 
-            Sidebar anchor styling
-        */
-        .sidebar a {
-            text-decoration: none; /* Removes underline from links */
-            color: #2C2C2C; /* Sets link color to a neutral tone */
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            text-align: center; /* Centers text inside the link */
-            font-size: 1.6rem;
-        }
+            /*Sidebar h4 headings styling*/
+            .sidebar h4{
+                font-size: 1.6rem; /* Sets the font size */
+                color: #2C2C2C; /* Sets the text color to a neutral tone */
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                text-align: center; /* Centers text inside the link */
+                text-decoration: underline;
+            }
 
-        /* 
-            Sidebar anchor hover styling
-        */
-        .sidebar a:hover {
-            color: #53D553; /* Changes link color to the primary color on hover */
-            text-decoration: underline; /* Underlines text on hover */
-        }
-
-        /* 
-            Sidebar h4 headings styling
-        */
-        .sidebar h4 {
-            font-size: 1.6rem; /* Sets the font size */
-            color: #2C2C2C; /* Sets the text color to a neutral tone */
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            text-align: center; /* Centers text inside the heading */
-            text-decoration: underline; /* Underlines the heading */
-        }
-
-        /* 
-            Hr line styling
-        */
-        hr {
-            border: 5px solid #53D553; /* Sets a thick border in primary color */
-            border-radius: 5px; /* Adds rounded corners to the border */
-            -webkit-border-radius: 5px;
-            -moz-border-radius: 5px;
-        }
-
+            /*Hr line styling*/
+            hr {
+                border: 5px solid #53D553;
+                border-radius: 5px;
+            }
     </style>
 
 </head>
@@ -433,8 +403,8 @@
                 </p>
                 <ul>
                     <li><b>Architecture &amp; Urban Form</b>: Mixed-use and cultural campus buildings reference Indigenous design motifs, use high-quality materials, and emphasize human scale at ground level, reinforcing Treaty 1 identity with Ojibwe-named streets and plazas.</li>
-                    <li><b>Public Art</b>: Establish a Public Art Advisory, dedicate 1% of capital budgets, prioritize First Nations artists, and integrate works into parks, streetscapes, and landmarks like the Cultural Campus gateway arbour.</li>
-                    <li><b>Naming Plan</b>: Streets and parks carry Treaty 1 language alongside English, approved by a Naming Council with Knowledge Keeper input; ceremonial spaces and art pieces bear culturally significant names.</li>
+                    <li><b>Public Art (Section 6.3)</b>: Establish a Public Art Advisory, dedicate 1% of capital budgets, prioritize First Nations artists, and integrate works into parks, streetscapes, and landmarks like the Cultural Campus gateway arbour.</li>
+                    <li><b>Naming Plan (Section 6.5)</b>: Streets and parks carry Treaty 1 language alongside English, approved by a Naming Council with Knowledge Keeper input; ceremonial spaces and art pieces bear culturally significant names.</li>
                 </ul>
             </article>
 
@@ -450,8 +420,8 @@
                     An integrated Infrastructure Framework ensures phased, coordinated delivery of roads, transit, water, sewer, and utilities:
                 </p>
                 <ul>
-                    <li><b>Transportation + Mobility</b>: Conducted a Transportation Impact Study; set mode-split targets; prioritize AT and transit; define street hierarchy with complete sidewalks, buffered bike lanes, traffic calming (chicanes, curb bump-outs), and flexible loading/drop-off lanes; plan rapid-transit nodes at Grant Ave. &amp; Route 90.</li>
-                    <li><b>Site Servicing Framework</b>:
+                    <li><b>Transportation + Mobility (Section 8.1)</b>: Conducted a Transportation Impact Study; set mode-split targets; prioritize AT and transit; define street hierarchy with complete sidewalks, buffered bike lanes, traffic calming (chicanes, curb bump-outs), and flexible loading/drop-off lanes; plan rapid-transit nodes at Grant Ave. &amp; Route 90.</li>
+                    <li><b>Site Servicing Framework (Section 8.2)</b>:
                     <ul>
                         <li><b>Water distribution</b>: connect to existing mains via multiple tie-ins; promote phased installation alongside street construction.</li>
                         <li><b>Wastewater collection</b>: sized for peak flows plus inflow/infiltration; drains to Doncaster Trunk; staged sewer connections.</li>
